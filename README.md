@@ -15,6 +15,11 @@ docker compose -f ./drupal/compose.yml up
 docker compose -f ./joomla/compose.yml up
 ```
 
+### Odoo
+```
+docker compose -f ./odoo/compose.yml up
+```
+
 ### WordPress
 ```
 docker compose -f ./wordpress/compose.yml up

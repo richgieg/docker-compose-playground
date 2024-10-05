@@ -1,0 +1,17 @@
+services:
+  app:
+    image: odoo
+    ports:
+      - 8069:8069
+    environment:
+      HOST: db
+      USER: user
+      PASSWORD: password
+  db:
+    image: postgres:15
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgres
