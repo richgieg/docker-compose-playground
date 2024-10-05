@@ -1,0 +1,19 @@
+services:
+  app:
+    image: joomla
+    ports:
+      - 8080:80
+    environment:
+      JOOMLA_DB_HOST: db
+      JOOMLA_DB_NAME: joomla_db
+      JOOMLA_DB_USER: user
+      JOOMLA_DB_PASSWORD: password
+  db:
+    image: mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: joomla_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
